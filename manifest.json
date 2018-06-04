@@ -1,0 +1,704 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Users/Administrador/Documents/GitHub/CulverinEngine-Project3/CulverinEditor/CulverinEditor",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "wpOpEGOKwG6NoLtS36XaQQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "AQtXns6ID0eoqTNBh+lLWg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "xVlQaX7Tk85omoiWv3O+Ag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "lBf4TYYU4umGPmyyt573QA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.Audio.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.Audio.html",
+          "hash": "9v32kmgUNf+Nhd9akbFt1Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.CompAnimation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.CompAnimation.html",
+          "hash": "HYl75vVDu/A+zpHtrfPNKA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.CompAudio.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.CompAudio.html",
+          "hash": "QytTebfCdYs6Wrqm4E3e3g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.CompButton.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.CompButton.html",
+          "hash": "TMIBbPgUfVnrF9iBKUFfaw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.CompCanvas.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.CompCanvas.html",
+          "hash": "fjIGICAHiNLq/8xEbDNdSQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.CompCheckBox.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.CompCheckBox.html",
+          "hash": "7Bp1A3G8E6o0UvL2loHFoQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.CompCollider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.CompCollider.html",
+          "hash": "t/lcutmrfWSgCHl0Z0ozBg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.CompGraphic.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.CompGraphic.html",
+          "hash": "1sczrSwwKtTQs31qQ4s12w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.CompImage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.CompImage.html",
+          "hash": "/xIz3oUoEsrKc3Fm/JVWaQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.CompInteractive.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.CompInteractive.html",
+          "hash": "2uqhPXX6n/UbHMFBS1O8Zg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.CompJoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.CompJoint.html",
+          "hash": "CWRjihep2WN2wUkLMXZJ2Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.CompLight.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.CompLight.html",
+          "hash": "09JN7D+UXMFvVxyqrfUXsw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.CompMaterial.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.CompMaterial.html",
+          "hash": "buTCSAVKp/dTOTS076SVdA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.CompMesh.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.CompMesh.html",
+          "hash": "OjFCdRb+37TS1Jos3X/c9A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.CompParticleSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.CompParticleSystem.html",
+          "hash": "4GIudM0l4VWRJGoerksA+Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.CompRectTransform.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.CompRectTransform.html",
+          "hash": "+peIj5G2pgV3gbeIkYUGLQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.CompRigidBody.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.CompRigidBody.html",
+          "hash": "O3Q7ZS1oMZTwBGIgMYuxlA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.CompSlider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.CompSlider.html",
+          "hash": "2X9OsyBsznpBoJic3IPiWw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.CompText.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.CompText.html",
+          "hash": "1d0pZ9a9DaPTybvWyBUlGg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.Component.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.Component.html",
+          "hash": "l4ChZ28/pyD3Dt7IHIdfjw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.CulverinBehaviour.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.CulverinBehaviour.html",
+          "hash": "TuN2S9Chdr99+8vnd7Mysw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.Debug.Color.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.Debug.Color.html",
+          "hash": "yYq+00wGMqWsvgyVOfzCxQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.Debug.Debug.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.Debug.Debug.html",
+          "hash": "ts35LBjEj05ZZxVy4KJopA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.Debug.Department.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.Debug.Department.html",
+          "hash": "p3O5dTPmhWkQz33Hqu+PSg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.Debug.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.Debug.html",
+          "hash": "IFSq1hs9hSo1nFLbfroYew=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.EventSystem.EventSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.EventSystem.EventSystem.html",
+          "hash": "Ro7TFS4wc4Ik8hw2tzEXIA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.EventSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.EventSystem.html",
+          "hash": "pKxTTNufB7gwt1UcM/nqnA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.GameObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.GameObject.html",
+          "hash": "1geJpaxZaixT+08neuiGTg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.Input.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.Input.html",
+          "hash": "fX6jBdVxKDMuSexZmkk6dQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.KeyCode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.KeyCode.html",
+          "hash": "VPq5cynSl+/P1qso3ptEBg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.Map.Map.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.Map.Map.html",
+          "hash": "NZD5HjE1YFUfw0GjzaeaVw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.Map.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.Map.html",
+          "hash": "/UgyCpypAPRl9xn1nF9S5w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.Material.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.Material.html",
+          "hash": "ZEvClbcuamxHU7kF4I21kg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.Mathf.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.Mathf.html",
+          "hash": "1WGGECV3AUFAUdOG3QdsTg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.Object.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.Object.html",
+          "hash": "JRQDQiL7+wRGdMpLwlwNQg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.Pathfinding.PathNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.Pathfinding.PathNode.html",
+          "hash": "cRo9MZBQK/TfyIDFpNk3/A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.Pathfinding.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.Pathfinding.html",
+          "hash": "w3XpoEf/SxIyDfqSS5rrVg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.PhysX.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.PhysX.html",
+          "hash": "IoKJm49sGGMc14qsBhVMyA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.Quaternion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.Quaternion.html",
+          "hash": "Ki3bbSREkq3JEjjiY/zctg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.Random.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.Random.html",
+          "hash": "GZgHF/oh5M9tKXSOD2MwXQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.SceneManagement.SceneManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.SceneManagement.SceneManager.html",
+          "hash": "boLiQ8qqeYBGF3KYpk8Z4Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.SceneManagement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.SceneManagement.html",
+          "hash": "cnPY783QnnMvEy1lFGEOwg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.Screen.Screen.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.Screen.Screen.html",
+          "hash": "fK7HxwbhVFO/hqD+rM3fpQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.Screen.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.Screen.html",
+          "hash": "Ic9r0Wx3APUvKYOjB8RTkg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.Time.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.Time.html",
+          "hash": "LOFaEqi8KRQMq94Gtt9UYw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.Transform.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.Transform.html",
+          "hash": "Wa7ynGbEBaM6Il9hcQOlBQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.Vector3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.Vector3.html",
+          "hash": "b0sVj9lut2pMuJneiliipg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.float4x4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.float4x4.html",
+          "hash": "C5u2DrkHaXOskZLUpG2dOA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CulverinEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CulverinEditor.html",
+          "hash": "bNxr0NwOV3RprEhMYP/8FA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "obj/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "ADpG22PeglUF5PGC0aQnqg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "frPdeW5hGroGiyexwMQIhg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build"
+      },
+      "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build"
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build"
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing"
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
