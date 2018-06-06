@@ -67,19 +67,118 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="add-your-introductions-here">Experience Scripting</h1>
+<h1 id="add-your-introductions-here">Synchronize Objects</h1>
 			<div class="row">
                 <div class="span12">
-					<a name="Prefabs"></a>
-                    <h4>Prefabs</h4>
+					<a name="How to Synchronize Methods"></a>
+                    <h4>How to Synchronize Methods (funciones)</h4>
                 </div>
             </div>
             <div class="row">
                 <div class="span12">
                     <p>
-					Voy a describir mi experiencia con MonoC#, desde los inicios a como resolvimos todos los problemas que nos hemos ido encontrando durante todo el proyecto
-
+						Primero vamos a ver como podemos llamar funciones desde C# a C++ y al reves.
                     </p>
+					<div class="span12">
+						<img class="thumbnail" style="max-height: 800px;max-width: 800px; margin: 0 auto;" src="../img/LinkFunctions.PNG" alt="" />
+					</div>
+	                <p><p>
+						Lo primero que vemos en la foto es la funcion de mono que utilizamos, mono_add_internal_call con esto lo que hacemos es decirle a mono que hay una funcion
+						que queremos poder utilizar desde C# y la recibiremos con la funcion que se pone como segundo argumento, el primero es el directorio de la funcion en C#.
+						 Tambien tenemos que hacer algo parecido en C#, y con las 2 cosas haremos que la funcion de C# llamara a la funcion de C++ del motor sin tener que hacerlo a mano.
+                    </p>
+					<div class="span12">
+						<img class="thumbnail" style="max-height: 800px;max-width: 800px; margin: 0 auto;" src="../img/LinkFunctionsMono.PNG" alt="" />
+					</div>
+	                <p>
+						Si ponemos lo que sale en la foto en una funcion estas diciendo que esta funcion quieres que llame a una funcion del Engine.
+                    </p>
+	                <p>
+						Para llamar a una funcion desde el Engine a C# tenemos que hacerlo llamando a la funcion mono_runtime_invoke (mirar documentacion). El if de expeption es para que 
+						te pinte en la ventana de debug de mono (Apartado More Funtionality) los null reference.
+                    </p>
+					<div class="span12">
+						<img class="thumbnail" style="max-height: 800px;max-width: 800px; margin: 0 auto;" src="../img/DoFunction.PNG" alt="" />
+					</div>
+                </div>
+            </div>
+			<div class="row">
+                <div class="span12">
+					<a name="How to Synchronize Objects"></a>
+                    <h4>How to Synchronize Objects (GameObject, Components,...)</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span12">
+                    <p>
+						Antes de nada debes haberte leido lo que es un MonoObject en la documentacion de Mono. Una vez leido, para sincronizar un Objeto del Engine con Stripting utilizaremos MonoObjects.
+						 Y para almacenar estos MonoObjects los pondremos en multimapas dependiendo del tipo de objeto que queramos guardar (Puedes hacerlo de la forma que quieras!!!).
+                    </p>
+					<div class="span12">
+						<img class="thumbnail" style="max-height: 800px;max-width: 800px; margin: 0 auto;" src="../img/Sync_Objects.PNG" alt="" />
+					</div>
+	                <p><p>
+						Como vemos en la foto tenemos el primer mapa de mono es el de GameObjects, antes de seguir antes lo teniamos de diferente forma, y el problema que vimos es que
+						 Garbage Collector de Mono cada cierto tiempo te modifica la position en memoria de algunos objetos por lo que si en el multimapa en vez de utilizar un uint utilizas MonoObject (es como lo teniamos antes), te petará. Este 
+						 error nos costo mucho descubrirlo, asi que pasamos a un sistema en que cada MonoObject tiene un GCHandle (Buscalo en la documentacion para saber que es). Entonces asi no nos tenemos que preocupar 
+						 por en que estado se encuentre. Vamos a ver la funcion para añadir un nuevo MonoObject al multimapa:
+                    </p>
+					<div class="span12">
+						<img class="thumbnail" style="max-height: 800px;max-width: 800px; margin: 0 auto;" src="../img/multimap_added.PNG" alt="" />
+					</div>
+	                <p><p>
+						Como vemos en la imagen, creamos una clase de GameObject y con la clase creamos un nuevo MonoObject, este lo inicializamos y lo añadimos al mapa creando su GCHandle.
+                    </p>
+					<p><p>
+						Esto puede parecer muy bonito pero luego como lo utilizamos. En la foto de abajo la funcion es la que te devuelve el propio padre del componente (gameObject de C#). 
+                    </p>
+					<div class="span12">
+						<img class="thumbnail" style="max-height: 800px;max-width: 800px; margin: 0 auto;" src="../img/GetParentGameObject.PNG" alt="" />
+					</div>
+					<p><p>
+						Por otro lado tambien tenemos otro tipo de funcion para poder coger le GameObject a partir de un MonoObject y es iterando el multimapa hasta entontrar el gameObject deseado. 
+						Este seguramente no es la mejor forma de utilizarlo pero es bastante comoda. La funciuon mono_gchandle_get_target te devolvera el MonoObject que esta asignado al GameObject.
+					</p>
+					<div class="span12">
+						<img class="thumbnail" style="max-height: 800px;max-width: 800px; margin: 0 auto;" src="../img/GetGameObject_function.PNG" alt="" />
+					</div>
+					<p><p>
+						Ahora vamos a ver como pasar otro tipo de objeto por ejemplo un componente (ya puede ser un Componente o un Script). La funcion es GetComponent:
+					</p>
+					<p>
+						La primera imagen es para saber si el GetComponent estamos cogiendo un Componente o un Script, si entra en alguno de los if significara que es un componente,
+						sino entra es que es un script.
+					</p>
+					<div class="span12">
+						<img class="thumbnail" style="max-height: 800px;max-width: 800px; margin: 0 auto;" src="../img/GetComponent1.PNG" alt="" />
+					</div>
+					<p>
+						En la segunda foto ya sabemos que tipo tenemos que devolver. Si es un script primero cogemos el gameObject que llama a GetComponent. Entonces iteramos los componentes y devolvemos 
+						el MonoObject del script deseado con la funcion GetMonoObject().
+					</p>
+					<div class="span12">
+						<img class="thumbnail" style="max-height: 800px;max-width: 800px; margin: 0 auto;" src="../img/GetComponent21.PNG" alt="" />
+					</div>
+					<p>
+						Cada script tiene un id (uint) que apunta al gchandle del MonoObject que se ha creado del Script. Asi solo tenemos que acceder al script y coger su gchandle.
+					</p>
+					<div class="span12">
+						<img class="thumbnail" style="max-height: 800px;max-width: 800px; margin: 0 auto;" src="../img/GetMonoScript.PNG" alt="" />
+					</div>
+					<p>
+						Si llegamos aqui significa que queremos un componente asi que ireamos y a partir del gameObject y del nombre del componente miramos si alguna vez hemos 
+						cogido anteiormente ese componente si es asi, lo devolvemos ya que lo hemos cogifo con el GetMonoObject() de componentes. Si es la primera vez que se pide 
+						ese componente entonces tenemos que crear un nuevo MonoObject apuntando a ese componente, lo añadimos al multimapa de componentes y lo devolvemos (return).
+					</p>
+					<div class="span12">
+						<img class="thumbnail" style="max-height: 800px;max-width: 800px; margin: 0 auto;" src="../img/GetComponent22.PNG" alt="" />
+					</div>
+					<p><p>
+						A partir de aqui hay diferentes modos de devolder MonoObjects como la funcion SetPosition:
+					</p>
+					<div class="span12">
+						<img class="thumbnail" style="max-height: 800px;max-width: 800px; margin: 0 auto;" src="../img/SetPosition.PNG" alt="" />
+					</div>
                 </div>
             </div>
 
