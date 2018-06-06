@@ -67,22 +67,78 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="add-your-introductions-here">Experience Scripting</h1>
+<h1 id="add-your-introductions-here">Compile a CSharp Script</h1>
 			<div class="row">
                 <div class="span12">
-					<a name="Prefabs"></a>
-                    <h4>Prefabs</h4>
+					<a name="Download Library"></a>
+                    <h4>Download Library</h4>
                 </div>
             </div>
             <div class="row">
                 <div class="span12">
                     <p>
-					Voy a describir mi experiencia con MonoC#, desde los inicios a como resolvimos todos los problemas que nos hemos ido encontrando durante todo el proyecto
-
+						Para empezar tenemos que instalarnos los prerequisitos para poder empezar, link: https://www.mono-project.com/docs/compiling-mono/windows/.
                     </p>
+                    <p>
+						Si no te aclaras, tienes que descargarte la libreria y poner dentro del proyecto en una carpeta. Mira el gif:
+					</p>
+					
+                </div>
+				<div class="span12">
+					<img class="thumbnail" style="max-height: 600px;max-width: 500px; margin: 0 auto;" src="../img/Compile_gif_folderMOno.gif" alt="" />
+				</div>
+            </div>
+			<div class="row">
+                <div class="span12">
+					<a name="Visual Configuration"></a>
+                    <h4>Visual Studio Configuration</h4>
                 </div>
             </div>
-
+            <div class="row">
+                <div class="span12">
+                    <p>
+						Ahora, tenemos que configurar nuestro proyecto para que podamos compilar un script desde el motor. Para ello vamos a segur una serie de pasos:
+					</p>
+					<ul>
+						<li>Seleccionamos el proyecto y abrimos la configuracion (Propiedades). Abrimos VC++ Direcories y alli tenemos que poner el path de la library
+						de mono, utiliza el SolutionDir: $(SolutionDir)\Game\Mono\lib;$(LibraryPath). Con esto le decimos donde tendra la libreria.
+						</li>
+						<div class="span12">
+							<img class="thumbnail" style="max-height: 600px;max-width: 500px; margin: 0 auto;" src="../img/Compile_VC++Direc.PNG" alt="" />
+						</div>
+						<li>Ahora tenemos que incluir en la ventana de C/C++ un directorio adicional: $(SolutionDir)\Game\Mono\include\mono-2.0</li>
+						<div class="span12">
+							<img class="thumbnail" style="max-height: 600px;max-width: 500px; margin: 0 auto;" src="../img/Compile_c++.PNG" alt="" />
+						</div>
+					</ul>
+                    <p>
+						Una vez terminado lo anterior ya tenemos todo preparado para poder compilar los scripts.
+					</p>
+                    <p>
+						Ahora vamonos al codigo y vamos a ver como podemos compilar un script. Para poder compilar un script utilizamos el comando "mcs" desde la consola "System". Puedes
+						seguir el tutorial de mono que mas o menos lo entenderas, o puedes ver en la fotografia como lo hemos hecho nosotros. 
+						Es importante enterner esto, lo que hace el compilar un script es ver si hay algun error y tambien te generara una dll del script,
+						si es asi te devolvera un 1 o si no tiene ningun error un 0.						
+					</p>
+					<div class="span12">
+						<img class="thumbnail" style="max-height: 800px;max-width: 800px; margin: 0 auto;" src="../img/Compile_function.PNG" alt="" />
+					</div>
+					<p>
+						Primero en la funcion le pasamos 3 argumentos:
+					</p>
+					<ul>
+						<li>const char* file: es el path del script .cs donde lo tengamos guardado.</li>
+						<li>std::string& libraryScript: esta string nos devolvera el path a library donde se importara el script una vez compilado. Más adelante explicare para que necesitamos esto.</li>
+						<li>const char* uid: es para poder recompilar los scripts, nosotros guardamos los scripts con su UID y si un script se ha editado queremos que se reimporte
+						con el mismo uid por eso lo pasamos.</li>
+					</ul>
+					<p>
+						Dentro de la funcion lo que hacemos es coger correctamente los path para luego ponerlos en la funcion system(), lo que hacemos es primer seteamos la variable
+						command a que utilice el programa mcs.exe que esta en las carpetas que antes hemos puesto en el motor. Le decimos que el target es library (dll) y el path de salida (out).
+						 Lo siguiente es por si utilizamos una Assembly Reference que ya llegaremos a eso más adelante.
+					</p>
+                </div>
+            </div>
 </article>
           </div>
           

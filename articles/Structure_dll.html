@@ -67,20 +67,52 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="add-your-introductions-here">Experience Scripting</h1>
+<h1 id="add-your-introductions-here">Structure CSharp (DLL)</h1>
 			<div class="row">
                 <div class="span12">
-					<a name="Prefabs"></a>
-                    <h4>Prefabs</h4>
+					<a name="Structure"></a>
+                    <h4>Structure</h4>
                 </div>
             </div>
             <div class="row">
                 <div class="span12">
                     <p>
-					Voy a describir mi experiencia con MonoC#, desde los inicios a como resolvimos todos los problemas que nos hemos ido encontrando durante todo el proyecto
-
+						Para la estructura empezamos haciendo los scripts sin que heredaran de nadie, entonces para acceder al GameObject del script al cual esta asignado
+						teniamos que cogerlo con "GameObject.gameObject". Luego vimos que este metodo es muy poco practico y lo cambiamos:
                     </p>
+					</div>
+					<div class="span6">
+						<img class="thumbnail" style="max-height: 600px;max-width: 500px; margin: 0 auto;" src="../img/Structure_Script_old2.PNG" alt="" />
+					</div>
+					<div class="span6">
+						<img class="thumbnail" style="max-height: 600px;max-width: 500px; margin: 0 auto;" src="../img/Structure_Script_new.PNG" alt="" />
+					</div>
+					<p>
+						New Structure: "ScriptName"::CulverinBehaviour::Component::Object.
+                    </p>
+            </div>
+			<div class="row">
+                <div class="span12">
+					<a name="CulverinBehaviour"></a>
+                    <h4>CulverinBehaviour</h4>
                 </div>
+            </div>
+            <div class="row">
+                <div class="span12">
+                    <p>
+						Cogimos como referencia la estructura de scripting que utiliza Unity. Como padre de todos los script de nuestro gameplay "CulverinBehaviour" que tiene 
+						las funciones basicas (set enabled GetEnables, etc...). Es importante utilizar el namespace!
+                    </p>
+					<div class="span6">
+						<img class="thumbnail" style="max-height: 800px;max-width: 700px; margin: 0 auto;" src="../img/Structure_CulverinBehaviour.PNG" alt="" />
+					</div>
+					<p>
+						Este heredara de Component, que tiene un gameObject que es el padre del componente que estes utilizando (el propio script lo tratamos como un componente), asi
+						que 
+                    </p>
+					<div class="span6">
+						<img class="thumbnail" style="max-height: 800px;max-width: 700px; margin: 0 auto;" src="../img/Structure_Component.PNG" alt="" />
+					</div>
             </div>
 
 </article>

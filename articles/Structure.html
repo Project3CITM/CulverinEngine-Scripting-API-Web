@@ -67,18 +67,36 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="add-your-introductions-here">Experience Scripting</h1>
+<h1 id="add-your-introductions-here">Structure</h1>
 			<div class="row">
                 <div class="span12">
-					<a name="Prefabs"></a>
-                    <h4>Prefabs</h4>
+					<a name="Structure"></a>
+                    <h4>Structure</h4>
                 </div>
             </div>
             <div class="row">
                 <div class="span12">
                     <p>
-					Voy a describir mi experiencia con MonoC#, desde los inicios a como resolvimos todos los problemas que nos hemos ido encontrando durante todo el proyecto
-
+						Ahora explicare la estructura que hemos hecho, no es perfecta ni sera la más optima pero es más que suficiente. Antes de nada hay que saber que para poder hacer
+						una algunas cosas en scripting tienes que hacer entender como funciona todo. Por ejemplo, si tu haces un script y quieres acceder a otro script, este tiene que estar
+						dentro de la misma dll, si no, no podras coger ese script. (Interes: Puede que realmente si se pueda, pero nunca llegamos a conseguirlo). Si estan en la misma dll, puedes
+						devolver el script como un MonoObject pero sino lo estan no podrás.
+                    </p>
+					<p>
+						A partir de lo dicho, hicimos un proyecto de C# que se llamaria CulverinEditor.
+                    </p>
+					<div class="span12">
+						<img class="thumbnail" style="max-height: 600px;max-width: 500px; margin: 0 auto;" src="../img/Structure_explorer.PNG" alt="" />
+					</div>
+					<p>
+						La estructura la dividire en 2 apartados:
+                    </p>
+					<ul>
+						<li><a href="Structure_dll.html">Structure CSharp (DLL) </a>: Donde explicare como empezamos y como terminamos y el porque de los cambios.</li>
+						<li><a href="Structure_c++.html">Structure CSharp in Engine </a>: Explicare como hemos estrucurado nuestro systema en el motor.</li>
+					</ul>
+					<p>
+						:D
                     </p>
                 </div>
             </div>
