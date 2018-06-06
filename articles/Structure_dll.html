@@ -77,8 +77,8 @@
             <div class="row">
                 <div class="span12">
                     <p>
-						Para la estructura empezamos haciendo los scripts sin que heredaran de nadie, entonces para acceder al GameObject del script al cual esta asignado
-						teniamos que cogerlo con "GameObject.gameObject". Luego vimos que este metodo es muy poco practico y lo cambiamos:
+                        Para la estructura empezamos haciendo los scripts sin que heredarán de nadie, entonces para acceder al GameObject del script al cual está asignado
+                        teníamos que cogerlo con "GameObject.gameObject". Luego vimos que este método es muy poco práctico y lo cambiamos:
                     </p>
 					</div>
 					<div class="span6">
@@ -100,21 +100,21 @@
             <div class="row">
                 <div class="span12">
                     <p>
-						Cogimos como referencia la estructura de scripting que utiliza Unity. Como padre de todos los script de nuestro gameplay "CulverinBehaviour" que tiene 
-						las funciones basicas (set enabled GetEnables, etc...). Es importante utilizar el namespace!
+                        Cogimos como referencia la estructura de scripting que utiliza Unity. Como padre de todos los script de nuestro gameplay "CulverinBehaviour" que tiene
+                        las funciones básicas (set enabled GetEnables, etc...). Es importante utilizar el namespace!
                     </p>
 					<div class="span6">
 						<img class="thumbnail" style="max-height: 800px;max-width: 700px; margin: 0 auto;" src="../img/Structure_CulverinBehaviour.PNG" alt="" />
 					</div>
-					<p>
-						Este heredara de Component, que tiene un gameObject que es el padre del componente que estas utilizando (el propio script lo tratamos como un componente). A parte del gameObject, 
-						tiene más funciones como GetComponent() o transform. Todos los componentes que creemos heredaran de CulverinBehaviour ya que este hereda de Component.
+                    <p>
+                        Este hereda de Component, que tiene un gameObject que es el padre del componente que estas utilizando (el propio script lo tratamos como un componente). A parte del gameObject,
+                        tiene más funciones como GetComponent() o transform. Todos los componentes que creemos heredarán de CulverinBehaviour ya que este hereda de Component.
                     </p>
 					<div class="span6">
 						<img class="thumbnail" style="max-height: 800px;max-width: 700px; margin: 0 auto;" src="../img/Structure_Component.PNG" alt="" />
 					</div>
-					<p>
-						Por ultimo, Component heredará de Object que es el que define todos los diferentes objetos que tendremos en el Engine (Components, GameObjects, etc...).
+                    <p>
+                        Por último, Componente hereda de Object que es el que define todos los diferentes objetos que tendremos en el Engine (Components, GameObjects, etc...).
                     </p>
 					<div class="span6">
 						<img class="thumbnail" style="max-height: 800px;max-width: 700px; margin: 0 auto;" src="../img/Structure_Object.PNG" alt="" />
@@ -129,12 +129,12 @@
             </div>
             <div class="row">
                 <div class="span12">
-					<p>
-						Luego las demas partes del codigo puede variar dependiendo de la persona, puedes hacerlo como tu quieras, aqui puedes ver la estrucutura de los GameObejets: 
-						<a href="https://project3citm.github.io/CulverinEngine-Scripting-API-Web/api/CulverinEditor.GameObject.html">Structure GameObject </a>.
+                    <p>
+                        Luego las demás partes del código puede variar dependiendo de la persona, puedes hacerlo como tu quieras, aquí puedes ver la estructura de los GameObjects
+                        <a href="https://project3citm.github.io/CulverinEngine-Scripting-API-Web/api/CulverinEditor.GameObject.html">Structure GameObject </a>.
                     </p>
-					<p>
-						Tambien puedes ver los diferentes scripts en la API Documentation: <a href="https://project3citm.github.io/CulverinEngine-Scripting-API-Web/api/index.html">Structure GameObject </a>
+                    <p>
+                        También puedes ver los diferentes scripts en la API Documentation: <a href="https://project3citm.github.io/CulverinEngine-Scripting-API-Web/api/index.html">Structure GameObject </a>
                     </p>
             </div>
 
