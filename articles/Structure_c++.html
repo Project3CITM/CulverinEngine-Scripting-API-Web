@@ -188,21 +188,47 @@
             <div class="row">
                 <div class="span12">
                     <p>
-						Nosotros utilizamos el modulo de ImportScript como manager del sistema de scripting. Donde iniciaremos el sistema y setearemos todo para que este listo para
-						usarse.
+                        Para almacenar todas las variables que contiene un script en C# hemos creado una estructura llamada ScriptVariable, que se encarga de guardar todos los datos necesarios relacionados:
                     </p>
+                    <ul>
+                        <li><b>NOMBRE:</b> string identificativa con el nombre de la variable.</li>
+                        <li><b>TIPO:</b> enum predefinido para poder controlar el tipo de variable deseado.</li>
+                        <li>
+                            <b>VALOR:</b> para almacenar el valor de la variable usamos 3 formas distintas, dependiendo del tipo de variable:
+                            <ul>
+                                <li><i>INT, FLOAT, BOOL:</i> valor almacenado en un puntero a void.</li>
+                                <li><i>STRING:</i> valor almacenado en una string.</li>
+                                <li><i>GAMEOBJECT:</i> almacenado en un puntero a GameObject de C++.</li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <div class="span6">
+                        <img class="thumbnail" style="max-height: 600px;max-width: 500px; margin: 0 auto;" src="../img/enums_variables.png" alt="" />
+                    </div>
+                    <div class="span6">
+                        <img class="thumbnail" style="max-height: 600px;max-width: 700px; margin: 0 auto;" src="../img/Jordi_scriptVariable.png" alt="" />
+                    </div>
                     <p>
-						Antes de explicar como lo tenemos estrucurado, tienes que saber que como utilizamos solo 1 DLL no necesitamos compilar ningun script, ya que para modificarlo lo hacemos
-						directamente del proyecto y recompilamos el proyecto, mira el GIF. Pero antes de esto utilizabamos otro sistema que era que cada script tenia su propia dll, asi que si lo modificabas
-						este se tenia que recompilar.
+                        Accedemos a la classe del script específica, y entonces iteramos todas sus variables, guardándonos en una estructura el mono_field y mono_type de dicha variable. Esta estructura nos la guardamos en un multimapa de (uint, "estructura") para poder acceder a ella posteriormente.
                     </p>
-					<div class="span12">
-						<img class="thumbnail" style="max-height: 600px;max-width: 500px; margin: 0 auto;" src="../img/ReBuild_Proj.gif" alt="" />
-					</div>
+                    <div class="span6">
+                        <img class="thumbnail" style="max-height: 600px;max-width: 700px; margin: 0 auto;" src="../img/get1part.png" alt="" />
+                    </div>
+                    <p>
+                        Seguidamente, iteraremos este multimapa para ir creando ScriptVariables, assignando a cada una de ellas su par type-field correspondiente, así como toda la información adicional necesaria.
+                    </p>
+                    <div class="span6">
+                        <img class="thumbnail" style="max-height: 600px;max-width: 700px; margin: 0 auto;" src="../img/get2part.png" alt="" />
+                    </div>
+                    <div class="span6">
+                        <img class="thumbnail" style="max-height: 600px;max-width: 700px; margin: 0 auto;" src="../img/getvalmono.png" alt="" />
+                    </div>
+                    <div class="span6">
+                        <img class="thumbnail" style="max-height: 600px;max-width: 700px; margin: 0 auto;" src="../img/linkvarmono.png" alt="" />
+                    </div>
                 </div>
             </div>
-			
-
 </article>
           </div>
           
