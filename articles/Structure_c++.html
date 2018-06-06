@@ -67,21 +67,119 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="add-your-introductions-here">Experience Scripting</h1>
+<h1 id="add-your-introductions-here">Structure CSharp in Engine</h1>
 			<div class="row">
                 <div class="span12">
-					<a name="Prefabs"></a>
-                    <h4>Prefabs</h4>
+					<a name="Introduction"></a>
+                    <h4>Introduction</h4>
                 </div>
             </div>
             <div class="row">
                 <div class="span12">
                     <p>
-					Voy a describir mi experiencia con MonoC#, desde los inicios a como resolvimos todos los problemas que nos hemos ido encontrando durante todo el proyecto
-
+						Ahora entramos en la parte complicada, como estructuramos el codigo. Yo te enseñare como lo hemos estructurado pero tu eres libre de hacerlo como quieras. Ten
+						encuenta que una vez ves el codigo te sera mucho mas dificil hacerlo a tu manera.
+                    </p>
+                    <p>
+						Antes de explicar como lo tenemos estrucurado, tienes que saber que como utilizamos solo 1 DLL no necesitamos compilar ningun script, ya que para modificarlo lo hacemos
+						directamente del proyecto y recompilamos el proyecto, mira el GIF. Pero antes de esto utilizabamos otro sistema que era que cada script tenia su propia dll, asi que si lo modificabas
+						este se tenia que recompilar.
+                    </p>
+					<div class="span12">
+						<img class="thumbnail" style="max-height: 600px;max-width: 500px; margin: 0 auto;" src="../img/ReBuild_Proj.gif" alt="" />
+					</div>
+                </div>
+            </div>
+			<div class="row">
+                <div class="span12">
+					<a name="Manager Scripting"></a>
+                    <h4>Manager Scripting</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span12">
+                    <p>
+						Nosotros utilizamos el modulo de ImportScript como manager del sistema de scripting. Donde iniciaremos el sistema y setearemos todo para que este listo para
+						usarse.
+                    </p>
+                    <p>
+						Primero de todo tenemos que inicializar Mono (mira la foto):
+                    </p>
+					<div class="span12">
+						<img class="thumbnail" style="max-height: 800px;max-width: 800px; margin: 0 auto;" src="../img/ImportScript_Init.PNG" alt="" />
+					</div>
+                    <p>
+						Lo primero cogemos los path necesarios para setear el directory working de mono y inicializamos un dominio. Luego tenemos una funcion que se llama LinkFunctions pero esto ya lo abordaremos
+						en otro apartado. Seguidamente, creamos un dominio hijo y con este el assembly y si se ha cargado bien, sacamos la imagen de culverin.
+                    </p>
+					<p>
+						Lo que tenemos despues de sacar la imagen es para que mono sepa que si algun objeto es null no pete sino que te devuelva "Null Reference", esto es super importante
+						ya que si no lo tienes te petara el motor cuando salte algo null.
+					</p>
+					<p>
+						En el motor tenemos un sistema de Resources y hay uno para Scripting, asi sabemos que que scripts tenemos y podemos utilizar. Cada vez que importamos un script,
+						creamos un resources de este y lo guardamos en library como meta.
+					</p>
+					<p>
+						Luego cuando un Componente script selecciona un script, este llama a la funcion LoadScript_CSharp, que devolvera un CSharpScript que es la clase que representa el script en el motor.
+					</p>
+					<div class="span12">
+						<img class="thumbnail" style="max-height: 800px;max-width: 800px; margin: 0 auto;" src="../img/ImportScript_loadscript.PNG" alt="" />
+					</div>
+                </div>
+            </div>
+			<div class="row">
+                <div class="span12">
+					<a name="Component Script"></a>
+                    <h4>Component Script</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span12">
+                    <p>
+						Antes de nada vemos como se ve en el motor:
+                    </p>
+                    <p>
+						SIN un Script seleccionado:
+                    </p>
+					<div class="span12">
+						<img class="thumbnail" style="max-height: 600px;max-width: 500px; margin: 0 auto;" src="../img/CompScript.PNG" alt="" />
+					</div>
+                    <p>
+						CON un Script seleccionado:
+                    </p>
+					<div class="span12">
+						<img class="thumbnail" style="max-height: 600px;max-width: 500px; margin: 0 auto;" src="../img/CompScript_YES.PNG" alt="" />
+					</div>
+					<p>
+					<p>
+						Como vemos en la segunda imagen, tenemos asignado un script DoorLevel2 al componente y podemos ver las variables publicas que tiene este.
                     </p>
                 </div>
             </div>
+			<div class="row">
+                <div class="span12">
+					<a name="CSharp Script"></a>
+                    <h4>CSharp Script</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span12">
+                    <p>
+						Nosotros utilizamos el modulo de ImportScript como manager del sistema de scripting. Donde iniciaremos el sistema y setearemos todo para que este listo para
+						usarse.
+                    </p>
+                    <p>
+						Antes de explicar como lo tenemos estrucurado, tienes que saber que como utilizamos solo 1 DLL no necesitamos compilar ningun script, ya que para modificarlo lo hacemos
+						directamente del proyecto y recompilamos el proyecto, mira el GIF. Pero antes de esto utilizabamos otro sistema que era que cada script tenia su propia dll, asi que si lo modificabas
+						este se tenia que recompilar.
+                    </p>
+					<div class="span12">
+						<img class="thumbnail" style="max-height: 600px;max-width: 500px; margin: 0 auto;" src="../img/ReBuild_Proj.gif" alt="" />
+					</div>
+                </div>
+            </div>
+			
 
 </article>
           </div>
